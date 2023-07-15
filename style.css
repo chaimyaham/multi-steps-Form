@@ -50,9 +50,10 @@ body{
    background-repeat:no-repeat;
    width: 30%;
    display: flex;
+   gap: 30px;
    flex-direction: column;
    border-radius: 10px;
-   padding: 30px 20px;
+   padding: 30px 25px;
 }
 .container .steps{
     width: 70%;
@@ -130,4 +131,41 @@ color: var(--primary-Marine-blue);
     background-color:rgba(71, 61, 255,.9) ;
     transition: all .5s ease-in-out;
 
+}
+.side-step{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    
+}
+.side-step .num{
+    height: 38px;
+    width: 38px;
+    
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    border: 2px solid var(--neutral-Light-gray);
+    color: white;
+
+} 
+.side-step .active{
+    background-color: var(--primary-Light-blue);
+    color: var(--primary-Marine-blue);
+
+}
+
+.side-step .steps-name{
+    text-transform: uppercase;
+}
+.side-step .steps-name h3{
+    color: var(--neutral-Alabaster);
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+.side-step .steps-name p{
+    font-size: 1rem;
+    color: var(--primary-Pastel-blue);
 }
