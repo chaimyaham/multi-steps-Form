@@ -9,12 +9,12 @@
 
 
 :root{
-    --primary-Marine-blue: hsl(213, 96%, 18%);
+    --primary-Marine-blue: rgb(2, 41, 90);
     --primary-Purplish-blue: rgb(71, 61, 255);
     --primary-Pastel-blue: hsl(228, 100%, 84%);
     --primary-Light-blue: hsl(206, 94%, 87%);
     --primary-Strawberry-red: hsl(354, 84%, 57%);
-    --neutral-Cool-gray: hsl(231, 11%, 63%);
+    --neutral-Cool-gray: #9699ab;
     --neutral-Light-gray: hsl(229, 24%, 87%);
     --neutral-Magnolia: hsl(217, 100%, 97%);
     --neutral-Alabaster: hsl(231, 100%, 99%);
@@ -155,6 +155,7 @@ color: var(--primary-Marine-blue);
 .side-step .active{
     background-color: var(--primary-Light-blue);
     color: var(--primary-Marine-blue);
+    transition: all .5s ease-in-out;
 
 }
 
@@ -174,6 +175,10 @@ color: var(--primary-Marine-blue);
 /*  step 2 */
 .step2,.step1,.step3,.step4{
     position: absolute;
+}
+.step2{
+    transform: translateX(100%);
+    opacity: 0;
 }
 .step2 .plans{
     margin-top: 40px;
@@ -283,7 +288,7 @@ color: var(--primary-Marine-blue);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 60px;
+    margin-top: 70px;
 }
 .next-btn2{
     padding: 15px 30px;
