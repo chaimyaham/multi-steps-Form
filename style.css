@@ -35,7 +35,7 @@ body{
 }
 .container{
     background-color: var(--neutral-White);
-    width: 1000px;
+    width: 900px;
     height: 650px;
     padding: 15px;
     border-radius: 10px;
@@ -58,6 +58,10 @@ body{
 .container .steps{
     width: 70%;
     padding: 30px 15px;
+    position: relative;
+    overflow: hidden;
+  
+  
     
 }
 .container .steps h1{
@@ -70,13 +74,13 @@ body{
     color: var(--neutral-Cool-gray);
 }
 .container .steps .step1, .step2,.step3,.step4{
-    padding: 15px 80px;
+    padding: 15px 50px;
 }
 .container .steps .step1 .inputs-fields{
-    margin: 40px 0;
+    margin: 30px 0;
    display: flex;
    flex-direction: column;
-   gap: 25px;
+   gap: 22px;
 
   
 }
@@ -176,12 +180,12 @@ color: var(--primary-Marine-blue);
 .step2,.step1,.step3,.step4{
     position: absolute;
 }
-.step2{
+.step2,.step2,.step3,.step4,.step5{
     transform: translateX(100%);
     opacity: 0;
 }
 .step2 .plans{
-    margin-top: 40px;
+    margin-top: 30px;
     display: flex;
     gap: 10px;
 
