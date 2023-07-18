@@ -116,36 +116,42 @@
 
           <div class="plans">
 
-            <input type="radio" name="plan" id="plan-arcad" hidden required>
+            <input type="radio" name="plan" id="plan-arcad"  value="Arcade" hidden required>
             <label for="plan-arcad">
               <div class="plan-info">
                 <img src="assets/images/icon-arcade.svg" alt="arcade" >
              <div>
              <h3> Arcade</h3>
-              <p>$9/mo</p>
+              <p class="yearInfo">$9/mo</p>
+              <p class="hiddenPara">2 months free</p>
              </div>
               </div>
             </label>
 
-            <input type="radio" name="plan" id="plan-advanced" hidden>
+            <input type="radio" name="plan" value="Advanced" id="plan-advanced" hidden>
             <label for="plan-advanced">
               <div class="plan-info">
                 <img src="assets/images/icon-advanced.svg" alt="advanced">
              <div>
              <h3> Advanced</h3>
-             <p> $12/mo</p>
+             <p  class="yearInfo"> $12/mo</p>
+             <p class="hiddenPara">2 months free</p>
+
              </div>
       
               </div>
             </label>
-            <input type="radio" name="plan" id="plan-pro" hidden>
+            <input type="radio" name="plan"  value="Pro" id="plan-pro" hidden>
             <label for="plan-pro">
               <div class="plan-info">
                 <img src="assets/images/icon-pro.svg" alt="pro" >
              <div>
              <h3> Pro</h3>
-             <p> $15/mo</p>
+             <p  class="yearInfo"> $15/mo</p>
+             <p class="hiddenPara">2 months free</p>
+
              </div>
+
               </div>
             </label>
             
@@ -182,22 +188,70 @@
         <!-- ============================================================================== -->
        
       <div class="step3 step">
+        <h1 class="step-title">  Pick add-ons</h1>
+        <p class="step-description">
+          Add-ons help enhance your gaming experience.
+        </p>
+        <div class="add-ons">
+
+          <label for="online-service" class="label">
+            <div class="cnt">
+              <input type="checkbox" name="add" id="online-service" value="Online service">
+            <div> 
+               <h3>Online service </h3>
+              <p class="moreInfo">Access to multiplayer games</p>
+            </div>
+
+            </div>
+           
+            <p class="more">+$1/mo</p>
+            
+          </label>
+          <label for="larger-storage" class="label">
+            <div class="cnt">
+              <input type="checkbox" name="add" id="larger-storage" value="Larger storage">
+              <div>
+               <h3> Larger storage</h3>
+                <p class="moreInfo">Extra 1TB of cloud save</p> 
+  
+              </div>
+             
+
+            </div>
+          
+            <p class="more">+$2/mo</p>
+            
+          </label>
+          <label for="customizable-profile" class="label">
+            <div class="cnt">
+              <input type="checkbox" name="add" id="customizable-profile" value="Customizable profile">
+            <div>
+              <h3> Customizable Profile</h3>
+              <p class="moreInfo"> Custom theme on your profile</p>
+
+            </div>
+
+            </div>
+            
+           
+            <p class="more">+$2/mo</p>
+            
+          </label>
+          
+       
+
+       
+          
+
+         
+        
+
+        </div>
       
 
-            Pick add-ons
-            Add-ons help enhance your gaming experience.
+           
+           
 
-            Online service
-            Access to multiplayer games
-            +$1/mo
-
-            Larger storage
-            Extra 1TB of cloud save
-            +$2/mo
-
-            Customizable Profile
-            Custom theme on your profile
-            +$2/mo
 
             <div class="btn-section">
   
@@ -207,19 +261,41 @@
 
       </div>
       <div class="step4 step">
-        
-    
-        
-        Finishing up
-        Double-check everything looks OK before confirming.
-       
-
-        Total (per month/year)
+        <h1 class="step-title">  Finishing up</h1>
+        <p class="step-description">
+          Double-check everything looks OK before confirming.
+        </p>
+        <div class="verification">
+          <div class="tt plan-verification">
+            <div>
+            <div class="planActice">  <h3 id="plane-name">Arcade </h3><span id="planType">(monthly)</span></div>
+               <u>change</u>
+            </div>
+               <p id="plan-amount">$90/yr</p>
+  
+  
+          </div>
+          <hr>
+          <div class=" tt add-ons-verify">
+            
+              <h3 class="add-ons-name">add ons name </h3>
+              <p class="add-ons-amount">+$10/yr</p>
+           
+          </div>
+     
+  
+        </div>
+        <div class="total">
+  
+          <h3>Total <span id="totalPer">(per year)</span></h3>
+          <p id="total">$120/yr</p>
+        </div>
+      
 
         <div class="btn-section">
   
           <button class="back-btn back" > Go Back</button>
-          <button class="" >Confirm</button>
+          <button class="confirm" >Confirm</button>
         </div>
         
 
