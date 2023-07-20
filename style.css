@@ -420,11 +420,12 @@ label:has(input[type="checkbox"]:checked){
     background-color: var(--neutral-Magnolia);
     border-radius: 10px;
     width: 500px;
-    margin-bottom: 20px;
+   
 }
 .verification .tt{
     display: flex;
     justify-content: space-between;
+    
  
 }
 
@@ -439,6 +440,7 @@ label:has(input[type="checkbox"]:checked){
 
     
 }
+
 .add-ons-verify p{
 color: var(--primary-Marine-blue);
 }
@@ -479,4 +481,10 @@ font-size: 1.1rem;
 .planActice{
     display: flex;
     align-items: center;
+}
+
+.add-ons-verify{
+    display: flex;
+    justify-content: space-between;
+    display: none;
 }

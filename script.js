@@ -4,10 +4,14 @@ const hiddenPara=document.querySelectorAll('.hiddenPara')
 const planeName=document.getElementById('plane-name')
 const planAmount=document.getElementById('plan-amount')
 const planType=document.getElementById('planType')
+const total=document.getElementById('total')
 const verification=document.querySelector('.verification')
 const radioPlan = document.querySelectorAll('input[name="plan"]');
 const add = document.querySelectorAll('input[name="add"]');
 
+const add_ons_amount=document.querySelectorAll('.add-ons-amount')
+
+const add_ons_verify=document.querySelectorAll('.add-ons-verify')
 const num=document.querySelectorAll('.num')
 const step=document.querySelectorAll('.step')
 const nextbtn=document.querySelectorAll('.next')
@@ -16,8 +20,8 @@ const  yearInfo=document.querySelectorAll('.yearInfo')
 const more=document.querySelectorAll('.more')
 
 
+let typeYearOrMonth="mo"
 
-console.log(add)
 
 
 
@@ -33,7 +37,10 @@ year.addEventListener('change',()=>{
         more[0].innerText="+$10/yr"
         more[1].innerText="+$20/yr"
         more[2].innerText="+$20/yr"
-
+        add_ons_amount[0].innerText="+$10/yr"
+        add_ons_amount[1].innerText="+$20/yr"
+        add_ons_amount[2].innerText="+$20/yr"
+typeYearOrMonth="yr"
         
         hiddenPara.forEach(elt => {
             elt.style.display="block"
@@ -51,6 +58,11 @@ year.addEventListener('change',()=>{
         more[0].innerText="+$1/mo"
         more[1].innerText="+$2/mo"
         more[2].innerText="+$2/mo"
+        add_ons_amount[0].innerText="+$1/mo"
+        add_ons_amount[1].innerText="+$2/mo"
+        add_ons_amount[2].innerText="+$2/mo"
+        typeYearOrMonth="mo"
+
         planType.innerText="(monthly)"
         console.log(planType.innerText)
         hiddenPara.forEach(elt => {
@@ -85,27 +97,38 @@ nextbtn.forEach((elt,index) => {
              }
                 elt.style.border="2px solid rgb(2, 41, 90)"
             })
-
+            let YearInfoCalcule=0
             radioPlan.forEach((element,index)=> {
     
                 if(element.checked){
                     planeName.innerText=element.value
                     planAmount.innerText=yearInfo[index].innerText
+                    YearInfoCalcule+=parseInt(yearInfo[index].innerText.match(/(\d+)/)[0])
+
                 
                 }
                 
             });
-            add.forEach((element,index)=> {
-    
-                if(element.checked){
-                    
-                    
-                
-                }else{
-                    
-                }
-                
-            });
+
+          let addOnAmountCalcule=0
+                add.forEach((element,index)=> {
+                     if(element.checked){
+                        console.log(element,index)
+                        console.log(add_ons_amount[index])
+
+                        add_ons_verify[index].style.display="flex"
+                        addOnAmountCalcule+=parseInt(add_ons_amount[index].innerText.match(/(\d+)/)[0])
+                        
+                     }
+                     
+                 });
+                console.log(addOnAmountCalcule,YearInfoCalcule)
+                 
+             total.innerText=`$${parseInt(addOnAmountCalcule+YearInfoCalcule)}/${typeYearOrMonth}`
+            
+             
+
+          
 
         }else{
             inputs.forEach((elt,i)=>{
@@ -135,6 +158,12 @@ backbtn.forEach((elt,index) => {
            step[index+1].style.transition="all .5s ease-in-out"
            num[index+1].classList.remove("active")
            num[index].classList.add("active")
+          list=[]
+          for (let i = 0; i < add_ons_verify.length; i++) {
+          add_ons_verify[i].style.display="none";
+            
+          }
+          
     })
     
 });
