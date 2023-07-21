@@ -9,6 +9,8 @@ const verification = document.querySelector(".verification");
 const radioPlan = document.querySelectorAll('input[name="plan"]');
 const add = document.querySelectorAll('input[name="add"]');
 
+
+
 const add_ons_amount = document.querySelectorAll(".add-ons-amount");
 
 const add_ons_verify = document.querySelectorAll(".add-ons-verify");
@@ -63,6 +65,8 @@ year.addEventListener("change", () => {
     });
   }
 });
+
+
 nextbtn.forEach((elt, index) => {
   elt.addEventListener("click", () => {
     const inputs = [...step[index].querySelectorAll("input")];
@@ -143,3 +147,4 @@ backbtn.forEach((elt, index) => {
     }
   });
 });
+

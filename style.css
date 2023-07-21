@@ -8,6 +8,7 @@
   box-sizing: border-box;
 }
 
+
 :root {
   --primary-Marine-blue: rgb(2, 41, 90);
   --primary-Purplish-blue: rgb(71, 61, 255);
@@ -112,7 +113,7 @@ body {
   font-size: 1.1rem;
 
   cursor: pointer;
-  margin-top: 50px;
+  margin-top: 30px;
 
   align-self: self-end;
   font-family: "Ubuntu", sans-serif;
@@ -278,7 +279,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 70px;
+  margin-top: 40px;
 }
 .next-btn2,
 .confirm {
@@ -459,4 +460,86 @@ u {
     color: var(--neutral-Cool-gray);
     font-size: 1rem;
     line-height: 1.4rem;
+}
+
+.mobileSidebar{
+  background-image: url(assets/images/bg-sidebar-mobile.svg);
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 20px;
+  height: 20vh;
+  padding-top: 30px;
+  border-radius: 10px;
+  z-index: 0;
+  display: none;
+}
+@media  screen and (max-width: 1280px) {
+
+  .container{
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    background-color: transparent;
+  }
+  .sidebar{
+    display: none;
+    opacity: 0;
+    z-index: -12;
+  }
+  .mobileSidebar{
+    display: flex;
+  }
+
+  .container .steps {
+    width: min(100%,400px);
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 1;
+    background-color: var(--neutral-White);
+    padding: 15px ;
+    height: 680px;
+    top: 15vh;
+   
+    /* margin:0 5px; */
+    border-radius: 10px;
+    
+  }
+
+
+
+  .step2 .plans {
+    flex-direction: column;
+  }
+  .step2 .plans .plan-info {
+   
+    flex-direction: row;
+    padding: 20px;
+    width: 100%;
+    height: auto;
+  justify-content: left;
+  gap: 10px;
+  }
+  .add-ons label{
+    width: 100%;
+
+  }
+.verification{
+  width: 100%;
+}
+.container .steps .step1,
+.step2,
+.step3,
+.step4 {
+  padding: 15px ;
+}
+
 }
