@@ -15,6 +15,7 @@ const add_ons_amount = document.querySelectorAll(".add-ons-amount");
 
 const add_ons_verify = document.querySelectorAll(".add-ons-verify");
 const num = document.querySelectorAll(".num");
+const Mnum = document.querySelectorAll(".Mnum");
 const step = document.querySelectorAll(".step");
 const nextbtn = document.querySelectorAll(".next");
 const backbtn = document.querySelectorAll(".back");
@@ -84,6 +85,8 @@ nextbtn.forEach((elt, index) => {
       if(index<3){
           num[index].classList.remove("active");
         num[index + 1].classList.add("active");
+          Mnum[index].classList.remove("active");
+        Mnum[index + 1].classList.add("active");
     }
       inputs.forEach((elt, i) => {
         const mylabel = labels[i].querySelector(".error");
@@ -141,6 +144,8 @@ backbtn.forEach((elt, index) => {
     step[index + 1].style.transition = "all .5s ease-in-out";
     num[index + 1].classList.remove("active");
     num[index].classList.add("active");
+    Mnum[index + 1].classList.remove("active");
+    Mnum[index].classList.add("active");
     list = [];
     for (let i = 0; i < add_ons_verify.length; i++) {
       add_ons_verify[i].style.display = "none";

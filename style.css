@@ -128,7 +128,7 @@ body {
   align-items: center;
   gap: 15px;
 }
-.side-step .num {
+.side-step .num,.Mnum {
   height: 38px;
   width: 38px;
 
